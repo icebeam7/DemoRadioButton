@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="DemoRadioButton.AppShell"
+       xmlns:views="clr-namespace:DemoRadioButton.Views">
+    <FlyoutItem Title=".NET Conf Latam 2020"
+                FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="RadioButtons">
+            <ShellContent Title="Básico">
+                <views:HorarioView/>
+            </ShellContent>
+
+            <ShellContent Title="Propiedades+Eventos">
+                <views:CuestionarioView/>
+            </ShellContent>
+
+            <ShellContent Title="MVVM">
+                <views:DesempeñoView/>
+            </ShellContent>
+            <!--<ShellContent Title="Group Name">
+                <views:SessionsView/>
+            </ShellContent>-->
+        </Tab>
+        <Tab Title="Content Templates">
+            <ShellContent Title="Normal">
+                <views:LenguajeView/>
+            </ShellContent>
+
+            <ShellContent Title="Algo novedoso">
+                <views:PaisView/>
+            </ShellContent>
+        </Tab>
+        <Tab Title="Group Names">
+            <ShellContent Title="Explícito">
+                <views:HorarioCompletoView/>
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+</Shell>

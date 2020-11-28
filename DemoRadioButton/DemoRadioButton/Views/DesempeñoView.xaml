@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:DemoRadioButton.ViewModels"
+             xmlns:converters="clr-namespace:DemoRadioButton.Converters"
+             x:Class="DemoRadioButton.Views.DesempeñoView">
+
+    <ContentPage.BindingContext>
+        <vm:DesempeñoViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <converters:DesempeñoConverter x:Key="desempeñoConverter"/>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Margin="10" Spacing="10" Padding="10">
+            <Label Text="Evaluación de desempeño del empleado" />
+
+            <RadioButton Content="Excelente" 
+                         TextColor="Green"
+                         IsChecked="{Binding Valoracion, 
+                                        Converter={StaticResource desempeñoConverter}, 
+                                        ConverterParameter=4}" />
+
+            <RadioButton Content="Aceptable"
+                         TextColor="Blue" 
+                         IsChecked="{Binding Valoracion, 
+                                        Converter={StaticResource desempeñoConverter}, 
+                                        ConverterParameter=3}"/>
+
+            <RadioButton Content="Neutral"
+                         TextColor="Black"
+                         IsChecked="{Binding Valoracion, 
+                                        Converter={StaticResource desempeñoConverter}, 
+                                        ConverterParameter=2}"/>
+
+            <RadioButton Content="Deficiente"
+                         TextColor="Orange"
+                         IsChecked="{Binding Valoracion, 
+                                        Converter={StaticResource desempeñoConverter}, 
+                                        ConverterParameter=1}"/>
+
+            <RadioButton Content="Pésimo"
+                         TextColor="Red"
+                         IsChecked="{Binding Valoracion, 
+                                        Converter={StaticResource desempeñoConverter}, 
+                                        ConverterParameter=0}"/>
+
+            <Label Text="{Binding Valoracion, StringFormat='Valoración: {0}'}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoRadioButton.Views.CuestionarioView">
+    <ContentPage.Content>
+        <StackLayout Margin="10" Spacing="10" Padding="10">
+            <Label Text="¿Cuál es la capital de República Checa?" />
+
+            <RadioButton ControlTemplate="{x:Static RadioButton.DefaultTemplate}"
+                         TextColor="Orange"
+                         Value="Zlin"
+                         WidthRequest="150" 
+                         HorizontalOptions="StartAndExpand"
+                         IsChecked="True"
+                         CheckedChanged="rb_CheckedChanged">
+                <RadioButton.Content>
+                    <Label Text="Zlín" />
+                </RadioButton.Content>
+            </RadioButton>
+
+            <RadioButton ControlTemplate="{x:Static RadioButton.DefaultTemplate}"
+                         TextColor="Blue"
+                         Value="Brno"
+                         WidthRequest="150" 
+                         HorizontalOptions="StartAndExpand"
+                         CheckedChanged="rb_CheckedChanged">
+                <RadioButton.Content>
+                    <Label Text="Brno" />
+                </RadioButton.Content>
+            </RadioButton>
+
+            <RadioButton ControlTemplate="{x:Static RadioButton.DefaultTemplate}"
+                         TextColor="SlateGray" 
+                         WidthRequest="150" 
+                         HorizontalOptions="StartAndExpand"
+                         Value="Praga"
+                         CheckedChanged="rb_CheckedChanged">
+                <RadioButton.Content>
+                    <Label Text="Praga" HorizontalOptions="Start" WidthRequest="50" />
+                </RadioButton.Content>
+            </RadioButton>
+
+            <RadioButton ControlTemplate="{x:Static RadioButton.DefaultTemplate}"
+                         TextColor="Purple"
+                         WidthRequest="150" 
+                         HorizontalOptions="StartAndExpand"
+                         Value="Plzen"
+                         CheckedChanged="rb_CheckedChanged">
+                <RadioButton.Content>
+                    <Label Text="Plzeň" />
+                </RadioButton.Content>
+            </RadioButton>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoRadioButton.Views.PaisView">
+
+    <ContentPage.Resources>
+        <ControlTemplate x:Key="lineControlTemplate">
+            <StackLayout Orientation="Horizontal">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CheckedStates">
+                            <VisualState x:Name="Checked">
+                                <VisualState.Setters>
+                                    <Setter Property="Opacity" TargetName="CheckedIndicator" Value="1"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Unchecked">
+                                <VisualState.Setters>
+                                    <Setter Property="Opacity" TargetName="CheckedIndicator" Value="0"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+
+                <Line x:Name="Button" InputTransparent="True" Stroke="Black" StrokeThickness="2" X1="0" Y1="0" X2="50" Y2="50"></Line>
+                <Line x:Name="CheckedIndicator" InputTransparent="True" TranslationX="-50" Opacity="0" Stroke="Red" StrokeThickness="2" X1="50" Y1="0" X2="0" Y2="50"></Line>
+                <ContentPresenter></ContentPresenter>
+            </StackLayout>
+        </ControlTemplate>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Margin="10" Spacing="10" Padding="10">
+            <Label Text="Marca tu nacionalidad" />
+
+            <RadioButton ControlTemplate="{StaticResource lineControlTemplate}">
+                <RadioButton.Content>
+                    <Image Source="mx.png" WidthRequest="75" HeightRequest="75"/>
+                </RadioButton.Content>
+            </RadioButton>
+
+            <RadioButton ControlTemplate="{StaticResource lineControlTemplate}">
+                <RadioButton.Content>
+                    <Image Source="co.png" WidthRequest="75" HeightRequest="75"/>
+                </RadioButton.Content>
+            </RadioButton>
+
+            <RadioButton ControlTemplate="{StaticResource lineControlTemplate}">
+                <RadioButton.Content>
+                    <Image Source="ec.png" WidthRequest="75" HeightRequest="75"/>
+                </RadioButton.Content>
+            </RadioButton>
+
+            <RadioButton ControlTemplate="{StaticResource lineControlTemplate}">
+                <RadioButton.Content>
+                    <Image Source="bo.png" WidthRequest="75" HeightRequest="75"/>
+                </RadioButton.Content>
+            </RadioButton>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

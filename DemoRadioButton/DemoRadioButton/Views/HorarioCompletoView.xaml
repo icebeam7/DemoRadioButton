@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoRadioButton.Views.HorarioCompletoView"
+             xmlns:vm="clr-namespace:DemoRadioButton.ViewModels"
+             Title="{Binding Seleccion}">
+
+    <ContentPage.BindingContext>
+        <vm:HorarioCompletoViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout Margin="5">
+            <StackLayout Margin="5" RadioButtonGroup.GroupName="Mes" RadioButtonGroup.SelectedValue="{Binding Mes}">
+                <Label Text="¿Qué mes eliges?" TextColor="Blue" />
+                <Label Text="{Binding Mes}" TextColor="Orange" FontAttributes="Bold" FontSize="Small" />
+
+                <RadioButton Content="Enero" Value="Ene" />
+                <RadioButton Content="Febrero" Value="Feb" />
+                <RadioButton Content="Marzo" Value="Mar"/>
+            </StackLayout>
+
+            <StackLayout Margin="5" RadioButtonGroup.GroupName="Dia" RadioButtonGroup.SelectedValue="{Binding Dia}">
+                <Label Text="¿En qué día?" TextColor="Green" />
+                <Label Text="{Binding Dia}" TextColor="Orange" FontAttributes="Bold" FontSize="Small" />
+
+                <RadioButton Content="Lunes" Value="1" />
+                <RadioButton Content="Martes" Value="2" />
+                <RadioButton Content="Miércoles" Value="3" />
+                <RadioButton Content="Jueves" Value="4" />
+            </StackLayout>
+
+            <StackLayout Margin="5">
+                <Label Text="¿A qué hora?" TextColor="Purple" />
+                <Label Text="{Binding Hora}" TextColor="Orange" FontAttributes="Bold" FontSize="Small" />
+
+                <RadioButton Content="Mañana" GroupName="Hora" Value="M" />
+                <RadioButton Content="Tarde" GroupName="Hora" Value="T"/>
+            </StackLayout>
+
+            <RadioButton Margin="5,-5" Content="Noche" GroupName="Hora" Value="N" FontSize="Small"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
