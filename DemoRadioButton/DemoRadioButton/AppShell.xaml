@@ -17,9 +17,6 @@
             <ShellContent Title="MVVM">
                 <views:DesempeñoView/>
             </ShellContent>
-            <!--<ShellContent Title="Group Name">
-                <views:SessionsView/>
-            </ShellContent>-->
         </Tab>
         <Tab Title="Content Templates">
             <ShellContent Title="Normal">
