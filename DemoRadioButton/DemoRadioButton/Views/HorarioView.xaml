@@ -9,6 +9,8 @@
             <RadioButton Content="Mañana" />
             <RadioButton Content="Tarde" />
             <RadioButton Content="Noche" />
+            <RadioButton Content="Medianoche" />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
